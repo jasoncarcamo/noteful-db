@@ -9,7 +9,7 @@ const notesRouter = require('./notes/notesRouter');
 
 app.use(cors());
 app.use(helmet());
-app.use(morgan('tiny'));
+app.use(morgan('common'));
 
 app.use('/folders', folderRouter);
 app.use('/notes', notesRouter);
