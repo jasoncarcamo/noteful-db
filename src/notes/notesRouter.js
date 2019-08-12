@@ -66,7 +66,6 @@ notesRouter
         .catch(next);
     })
     .delete((req, res, next) => {
-        console.log(req.params.noteId)
         notesServices.deleteNote(req.app.get('db'), req.params.noteId).then(data => {
             if(!data){
                 return res.status(404).json({
